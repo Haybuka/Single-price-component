@@ -3,18 +3,10 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     font-family: 'Karla';
-    max-width: 1400px;
-    width: 100vh;
     background-color: hsl(218, 22%, 67%);
-    /* - Cyan: hsl(179, 62%, 43%)
-- Bright Yellow: hsl(71, 73%, 54%) */
-    /* - Light Gray: hsl(204, 43%, 93%)
-- Grayish Blue: hsl(218, 22%, 67%) */
 }
 
 main h2 {
@@ -30,31 +22,17 @@ main p {
     line-height: 1.5em;
 }
 
-article {
-    background-color: hsl(179, 61%, 44%);
-    padding: 20px;
-    color: #fff;
-}
-
-main {
-    background-color: white;
-    padding: 20px;
-}
-
 article h2 {
     font-size: 2em;
     display: inline-block;
+    margin: 10px auto;
 }
 
 article small {
     display: inline-block;
-}
-
-section {
-    padding: 20px;
-    background-color: hsl(179, 47%, 52%);
-    color: #fff;
-    line-height: 1.5em;
+    opacity: 0.5;
+    position: relative;
+    top: -5px;
 }
 
 section ul {
@@ -64,6 +42,67 @@ section ul {
 
 section li {
     list-style-type: none;
+    opacity: 0.7;
 }
+
+article button {
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 21%, 0.5);
+    border: none;
+    padding: 10px 100px;
+    margin: 10px auto;
+    font-weight: 700;
+}
+
+#content {
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    background-color: white;
+    background-color: transparent;
+    margin: 40px auto;
+    border-radius: 10px;
+    width: 980px;
+    box-shadow: 3px 5px 5px grey;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(3, minmax(0, auto));
+}
+
+main {
+    background-color: white;
+    padding: 30px;
+    grid-column: 1/12;
+    grid-row: 1/2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+article {
+    background-color: hsl(179, 61%, 44%);
+    padding: 30px;
+    color: #fff;
+    grid-column: 1/6;
+    grid-row: 2/3;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+
+section {
+    padding: 30px;
+    background-color: hsl(179, 47%, 52%);
+    color: #fff;
+    grid-column: 6/12;
+    grid-row: 2/3;
+    line-height: 1.5em;
+    border-bottom-right-radius: 10px;
+}
+
+footer {
+    grid-column: 1/12;
+    grid-row: 3/4;
+}
+
 
 @media screen and (max-width:375px) {}
